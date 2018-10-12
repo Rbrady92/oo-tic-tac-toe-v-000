@@ -35,11 +35,11 @@ class TicTacToe
   end
 
   def move(index, token = "X")
-    @board[index] = token
+    board[index] = token
   end
 
   def position_taken?(index)
-    @board[index] == " " ? false : true
+    board[index] == " " ? false : true
   end
 
   def valid_move?(index)
@@ -71,13 +71,13 @@ class TicTacToe
     if over?
       arr = won?
       player = arr[0]
-      return @board[player]
+      return board[player]
     end
   end
 
   def turn_count
     turns = 0
-    @board.each {|curr| curr != " " ? turns += 1 : turns = turns}
+    board.each {|curr| curr != " " ? turns += 1 : turns = turns}
     return turns
   end
 
@@ -95,9 +95,9 @@ class TicTacToe
       win_index_2 = win_combination[1]
       win_index_3 = win_combination[2]
 
-      position_1 = @board[win_index_1]
-      position_2 = @board[win_index_2]
-      position_3 = @board[win_index_3]
+      position_1 = board[win_index_1]
+      position_2 = board[win_index_2]
+      position_3 = board[win_index_3]
 
       if position_1 == "X" && position_2 == "X" && position_3 == "X"
         return win_combination
@@ -131,7 +131,7 @@ class TicTacToe
       turn
     end
     if won?.is_a?(Array)
-      puts "Congratulations #{winner(@board)}!"
+      puts "Congratulations #{winner(board)}!"
     elsif draw?
       puts "Cat's Game!"
     else
