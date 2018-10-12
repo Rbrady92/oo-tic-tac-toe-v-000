@@ -14,7 +14,7 @@ class TicTacToe
   [2,4,6]]
 
   def display_board
-    puts @board
+    puts "#{@board}"
   end
 
   def input_to_index(input)
