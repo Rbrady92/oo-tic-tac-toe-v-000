@@ -64,7 +64,7 @@ class TicTacToe
     false
   end
 
-  def winner
+  def winner(board)
     if over?
       arr = won?
       player = arr[0]
