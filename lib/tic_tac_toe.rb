@@ -108,6 +108,7 @@ class TicTacToe
       display_board
     else
       puts "this position is either taken or invalid"
+      turn
     end
   end
 
