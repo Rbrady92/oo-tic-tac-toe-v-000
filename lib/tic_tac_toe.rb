@@ -128,7 +128,7 @@ class TicTacToe
       turn
     end
     if won?.is_a?(Array)
-      puts "Congratulations #{winner(board)}!"
+      puts "Congratulations #{winner(@board)}!"
     elsif draw?
       puts "Cat's Game!"
     else
