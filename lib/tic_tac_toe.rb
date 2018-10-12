@@ -34,7 +34,7 @@ class TicTacToe
       return true
     end
     false
-  end  
+  end
 
   def full?
     @board.include?(" ") ? false : true
@@ -66,12 +66,12 @@ class TicTacToe
     turns = 0
     @board.each {|curr| curr != " " ? turns += 1 : turns = turns}
     return turns
-  end 
+  end
 
   def current_player
     return turn_count % 2 == 0 ? "X" : "O"
   end
-  
+
 
   def won?
     count = 0
@@ -108,11 +108,11 @@ class TicTacToe
       display_board
     else
       puts "this position is either taken or invalid"
-    end 
-  end 
+    end
+  end
 
 
-  def play(board)
+  def play
     until over? || won? != false || draw?
       turn
     end
@@ -124,8 +124,4 @@ class TicTacToe
       return nil
     end
   end
-end 
-
-
-
-  
+end
