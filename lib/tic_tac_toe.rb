@@ -116,7 +116,7 @@ class TicTacToe
     user_input = gets.strip
     user_input = user_input.input_to_index
 
-    if valid_move?(user_input)
+    if user_input.valid_move?
       move(user_input)
       display_board
     else
