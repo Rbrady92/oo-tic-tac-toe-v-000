@@ -117,7 +117,7 @@ class TicTacToe
     user_input = user_input.input_to_index
 
     if user_input.valid_move?
-      move(user_input)
+      user_input.move
       display_board
     else
       puts "this position is either taken or invalid"
