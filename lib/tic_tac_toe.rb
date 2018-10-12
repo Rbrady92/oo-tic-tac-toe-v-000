@@ -65,7 +65,7 @@ class TicTacToe
   end
 
   def winner
-    if won?.is_a?(Array)
+    if over?
       arr = won?
       player = arr[0]
       return @board[player]
