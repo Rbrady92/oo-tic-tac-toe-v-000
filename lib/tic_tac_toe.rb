@@ -41,7 +41,7 @@ class TicTacToe
   end
 
   def over?
-    if won?.is_a?(Array)  || full?(board)
+    if won?.is_a?(Array)  || full?
       return true
     end
     false
